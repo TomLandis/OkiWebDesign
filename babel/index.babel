@@ -233,11 +233,11 @@ class App extends React.Component {
         <div id="accordion" role="tablist" aria-multiselectable="true">
           {reci.map(data => (
             <div className="card">
-              <div className="card-header" role="tab" id={data.inIt}>
+              <div className="card-header" role="tab" id={data.index}>
                 <p className="mb-0">
                   <a
                     data-toggle="collapse"
-                    data-parent={"#" + data.inIt}
+                    data-parent={"#" + data.index}
                     href={"#" + data.name}
                     aria-expanded="false"
                     aria-controls={data.name}
@@ -252,7 +252,7 @@ class App extends React.Component {
                 id={data.name}
                 className="collapse hide"
                 role="tabpanel"
-                aria-labelledby={data.inIt}
+                aria-labelledby={data.index}
               >
                 <div className="card-block">
                   {data.inIt}
