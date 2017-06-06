@@ -181,7 +181,7 @@ var Cell = function (_React$Component4) {
 
 var Credit = function Credit() {
   return React.createElement(
-    "h3",
+    "h5",
     null,
     "Made by Tom Landis - 2017"
   );
