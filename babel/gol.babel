@@ -124,7 +124,7 @@ class Cell extends React.Component {
   
   
 }
-const Credit = () => <h3>Made by Tom Landis - 2017</h3> ; 
+const Credit = () => <h5>Made by Tom Landis - 2017</h5> ; 
 
 class Grid extends React.Component {
     constructor(props) {
