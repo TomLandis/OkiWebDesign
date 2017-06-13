@@ -107,7 +107,10 @@ header .container-fluid
 /*------------------------------------*\
 	SECTIONS
 \*------------------------------------*/
-
+.mini {
+	max-width:200px;
+	margin: auto;
+}
 .number .container-fluid
 {
     background-image: url('https://unsplash.it/3000/2000?image=1041');
