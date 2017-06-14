@@ -114,6 +114,7 @@ header .container-fluid
 	border: 4px solid #005a8a;
 	max-width:200px;
 	margin: 0 auto;
+	display: block;
 }
 .number .container-fluid
 {
