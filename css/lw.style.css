@@ -1,0 +1,22 @@
+
+
+body {
+  text-align: center;
+  padding: 3px;
+  margin: auto;
+  background-color: #c6e8ff;
+  font-family: 'Patrick Hand SC', cursive;
+  transition:all 0.4 ease;
+}
+.boxy {
+  display: block;
+  float: center;
+  min-width: 200px;
+  margin: auto;
+}
+#con{
+  
+}
+button:hover{
+  border-radius: 70%;
+}
