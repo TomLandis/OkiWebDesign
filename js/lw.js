@@ -70,7 +70,7 @@ $.getJSON("https://ipinfo.io", function(data) {
 
 //this attemps to solve the issue regarding lag in time from when the user clicks that it's okay to use location data
 
-function afterGeo = setTimeout(function(){   $.getJSON(theUrl + lat + "," + lon + "&appid=66b18b2ee6cb8577e268c98efdecf6e5", function(data) {
+setTimeout(function(){   $.getJSON(theUrl + lat + "," + lon + "&appid=66b18b2ee6cb8577e268c98efdecf6e5", function(data) {
   console.log(data);
     temp_f = data.current.temp_f;
     temp_c = data.current.temp_c;
@@ -92,4 +92,4 @@ function afterGeo = setTimeout(function(){   $.getJSON(theUrl + lat + "," + lon 
     $("#weatherPic").html('<img src=' + image + ' id="con">');
     $("#details").html('<img src=' + image + '><h3> Feels Like ' + feelsLikeC + '° C / ' + feelsLikeF + "° F <br> " + humidity + "% Humidity with " + vis + "km of visibility <br> " + windSpeed + " Kph wind from the " + windDir + "<h3>"); }, 9000);
                                           
-afterGeo();
+
