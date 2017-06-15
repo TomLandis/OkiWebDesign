@@ -67,3 +67,27 @@ $.getJSON("https://ipinfo.io", function(data) {
     });
 
 });
+
+//this attemps to solve the issue regarding lag in time from when the user clicks that it's okay to use location data
+
+function afterGeo = setTimeout(function(){   $.getJSON(theUrl + lat + "," + lon + "&appid=66b18b2ee6cb8577e268c98efdecf6e5", function(data) {
+  console.log(data);
+    temp_f = data.current.temp_f;
+    temp_c = data.current.temp_c;
+    description = data.current.condition.text;
+    image = data.current.condition.icon;
+    humidity = data.current.humidity;
+    vis = data.current.vis_km;
+    windDir = data.current.wind_dir;
+    windSpeed = data.current.wind_kph;
+    feelsLikeF = data.current.feelslike_f;
+    feelsLikeC = data.current.feelslike_c;
+    city = data.location.name;
+    region = data.location.region;
+    country = data.location.country;
+    
+    $("#city").html( city + ' - ' + region + ' - ' +  country + " is"); 
+    $("#temp").html(temp_c + '°' + 'C');
+    $("#conditions").html(description);
+    $("#weatherPic").html('<img src=' + image + ' id="con">');
+    $("#details").html('<img src=' + image + '><h3> Feels Like ' + feelsLikeC + '° C / ' + feelsLikeF + "° F <br> " + humidity + "% Humidity with " + vis + "km of visibility <br> " + windSpeed + " Kph wind from the " + windDir + "<h3>"); }, 3000);
