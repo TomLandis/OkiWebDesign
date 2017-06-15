@@ -90,4 +90,6 @@ function afterGeo = setTimeout(function(){   $.getJSON(theUrl + lat + "," + lon 
     $("#temp").html(temp_c + '°' + 'C');
     $("#conditions").html(description);
     $("#weatherPic").html('<img src=' + image + ' id="con">');
-    $("#details").html('<img src=' + image + '><h3> Feels Like ' + feelsLikeC + '° C / ' + feelsLikeF + "° F <br> " + humidity + "% Humidity with " + vis + "km of visibility <br> " + windSpeed + " Kph wind from the " + windDir + "<h3>"); }, 3000);
+    $("#details").html('<img src=' + image + '><h3> Feels Like ' + feelsLikeC + '° C / ' + feelsLikeF + "° F <br> " + humidity + "% Humidity with " + vis + "km of visibility <br> " + windSpeed + " Kph wind from the " + windDir + "<h3>"); }, 9000);
+                                          
+afterGeo();
