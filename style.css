@@ -101,6 +101,7 @@ header .container-fluid
 .jumbotron p
 {
     color: #FFFFFF;
+	padding-bottom: 20px;
  
 }
 
