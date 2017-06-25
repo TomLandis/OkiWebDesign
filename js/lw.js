@@ -11,6 +11,24 @@ var newYorkLat = 40.730610;
 var newYorkLon =  -73.935242;
 
 $(document).ready(function() {
+  
+      //F and C button
+    var cel = true; 
+    var tempF = 0;
+   $("#switcher").on("click", function(){
+          
+    if (cel === true) {
+    $("#switcher").html("Show in Celsius");
+     
+       $("#temp").html(temp_f + '°' + 'F');
+      cel = false;
+      }else{
+      $("#switcher").html("Show in Fahrenheit");
+      $("#temp").html(temp_c + '°' + 'C');
+      cel = true;
+    }
+    
+   }); 
 
 
   //location, location, location
@@ -50,23 +68,7 @@ $.getJSON("https://ipinfo.io", function(data) {
     $("#weatherPic").html('<img src=' + image + ' id="con">');
     $("#details").html('<img src=' + image + '><h3> Feels Like ' + feelsLikeC + '° C / ' + feelsLikeF + "° F <br> " + humidity + "% Humidity with " + vis + "km of visibility <br> " + windSpeed + " Kph wind from the " + windDir + "<h3>");
     
-    //F and C button
-    var cel = true; 
-    var tempF = 0;
-   $("#switcher").on("click", function(){
-          
-    if (cel === true) {
-    $("#switcher").html("Show in Celsius");
-     
-       $("#temp").html(temp_f + '°' + 'F');
-      cel = false;
-      }else{
-      $("#switcher").html("Show in Fahrenheit");
-      $("#temp").html(temp_c + '°' + 'C');
-      cel = true;
-    }
-    
-   }); 
+
   });
 
     });
