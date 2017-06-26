@@ -1,6 +1,9 @@
 /*------------------------------------*\
 	COMMONS CLASSES
 \*------------------------------------*/
+.centerFix {
+	align-text: center !important;
+}
 a {
 color: black;
 	text-decoration: none !important;
